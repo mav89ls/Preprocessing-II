@@ -1,6 +1,25 @@
 .home {
 
+  .welcome-header{
+    
+    border-bottom: .1rem dashed @eastern-blue;
+  }
+  
+
+.welcome-header img{
+  margin-bottom: 1.5rem;
+  
+}
+
+
+
+
   .content-section {
+
+   
+
+
+
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
@@ -9,21 +28,49 @@
    
     
     .text-content {
+
+@media @mobile {
+  // border: 1px solid red;
+  width: 100%;
+}
+
+
       width: 48%;
       padding-right: 1%;
     }
 
     .img-content {
+      
+      @media @mobile {
+        // border: 1px solid red;
+        width: 100%;
+        padding-left:.2rem;
+        margin-bottom: 1rem;
+      }
+      
+      
+      
+      // border: 1px solid red;
       width: 48%;
       padding-left: 1%;
 
       img {
+        @media @mobile {
+          // border: 1px solid red;
+          width: 100%;
+        }
         border-radius: 10px;
       }
     }
   }
 
   .inverse-content {
+
+@media @mobile {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
@@ -39,6 +86,10 @@
   }
 
   .content-destination {
+
+    @media @mobile {
+      width:100%;
+    }
     width: 75%;
     margin: 0 auto 30px;
 
@@ -48,14 +99,61 @@
   }
 
   .content-pick {
+
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+      
+    }
+    
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
 
     .destination {
+      @media @mobile {
+        // border: 1px solid black;
+        width: 100%;
+        padding: 1rem 3rem 1rem 3rem;
+        
+      }
+
+
+
+
       width: 30%;
       margin-bottom: 30px;
     }
+    .btn {
+
+      @media @mobile {
+      
+        width: 100%;
+        // border: 2px solid red;
+    
+    }
+
+
+      // border:1px solid red; test border, ignore//
+      display:flex;
+      justify-content: center;
+      border-radius: 1.8rem;
+      font-size: 1.8rem;
+      padding: 1rem 0rem 1rem 0rem;
+//my mixin here//
+      .button-styling (@eastern-blue, @white, 19.8rem, 4rem)
+      
+    }
+
+    
+
+   
+
   }
+ 
+
+
+
 }// home
